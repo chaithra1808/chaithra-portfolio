@@ -912,22 +912,42 @@ main {
   width: 100%;
   padding: 8px 10px;
   border-radius: 8px;
+  cursor: pointer; /* added */
 }
 
 .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
 
+/* ------- Portfolio Projects Grid -------- */
+
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  /* 2 or 3 columns depending on your preference */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-bottom: 10px;
+  padding: 0 10px; /* small padding */
+  box-sizing: border-box;
 }
 
-.project-item { display: none; }
+/* Show active projects */
+.project-item {
+  display: none;
+  flex-direction: column;
+  background: var(--eerie-black-3);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .project-item.active {
-  display: block;
+  display: flex;
   animation: scaleUp 0.25s ease forwards;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 @keyframes scaleUp {
@@ -935,15 +955,24 @@ main {
   100% { transform: scale(1); }
 }
 
-.project-item > a { width: 100%; }
+.project-item > a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------- Project Image -------- */
 
 .project-img {
   position: relative;
   width: 100%;
-  height: 200px;
-  border-radius: 16px;
+  height: 180px; /* fixed height for uniformity */
+  border-radius: 16px 16px 0 0;
   overflow: hidden;
   margin-bottom: 15px;
+  background: #222; /* fallback bg */
 }
 
 .project-img::before {
@@ -958,7 +987,9 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+.project-item > a:hover .project-img::before {
+  background: hsla(0, 0%, 0%, 0.5);
+}
 
 .project-item-icon-box {
   --scale: 0.8;
@@ -989,12 +1020,19 @@ main {
   height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
+  display: block;
 }
 
 .project-item > a:hover img { transform: scale(1.1); }
 
+/* ------- Project Text Content -------- */
+
 .project-title,
-.project-category { margin-left: 10px; }
+.project-category {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  padding-right: 10px;
+}
 
 .project-title {
   color: var(--white-2);
@@ -1002,12 +1040,23 @@ main {
   font-weight: var(--fw-400);
   text-transform: capitalize;
   line-height: 1.3;
+  word-break: break-word;
 }
 
 .project-category {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+  text-transform: uppercase;
+}
+
+/* Optional: make text container consistent height to align cards */
+.project-text-container {
+  padding: 0 10px 15px 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 

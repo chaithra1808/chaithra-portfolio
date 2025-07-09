@@ -307,173 +307,147 @@
             </a>
         </div>
     </article>
+    
+    <!--
+     - #PORTFOLIO
+    -->
 
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+    <article class="portfolio" data-page="portfolio">
+      <header>
+        <h2 class="h2 article-title">Portfolio</h2>
+      </header>
+      <section class="projects">
+        <ul class="filter-list">
+          
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Machine Learning</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Cybersecurity</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Web Development</button>
+          </li>
+        </ul>
+        <div class="filter-select-box">
+          <button class="filter-select" data-select>
+            <div class="select-value" data-select-value>Select category</div>
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+          </button>
+          <ul class="select-list">
+            <li class="select-item">
+              <button data-select-item>All</button>
             </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Machine Learning</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Cybersecurity</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web Development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-select-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Machine Learning</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Cybersecurity</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web Development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item active" data-filter-item data-category="machine learning">
-              <a href="https://github.com/chaithra1808/BIG-SALES-PREDICTION-USING-RANDOM-FOREST-REGRESSOR.git" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.png" alt="Profit Predictor" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Profit Predictor</h3>
-
-                <p class="project-category">Developed a Random Forest Regressor model to predict future sales using historical data. Focused on optimizing performance, identifying key features, and generating insights to support business decisions.</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="cybersecurity">
-              <a href="https://github.com/chaithra1808/vulnerability-reports.git" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.webp" alt="Ethical Hacking" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Ethical Hacking and Vulnerability Analysis</h3>
-
-                <p class="project-category">•	Demonstrated proficiency in web application security by identifying and reporting 15+ vulnerabilities, including XSS and SQLi, using Testfire.net and Juice Shop, producing detailed reports</p>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="cybersecurity">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.webp" alt="Digital Forensics" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Digital Forensics and Cybercrime Investigation</h3>
-
-                <p class="project-category">Cybersecurity</p>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="cybersecurity">
-              <a href="https://github.com/chaithra1808/secure-file-transfer.git" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="Secure File Transfer System" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Secure File Transfer Systemr</h3>
-
-                <p class="project-category">Python-based tool for securely transferring files using AES, RSA, and SHA-256 verification. Includes GUI (Tkinter) and web (Flask) versions.</p>
-
-              </a>
-            </li>
-
-
-            <li class="project-item active" data-filter-item data-category="web development">
-              <a href="https://chaithra1808.github.io/task-manager/" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.jpg" alt="Task Manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Built an interactive to-do list web application using HTML, CSS, and JavaScript. Features include adding, deleting, and marking tasks as completed</p>
-
-              </a>
-            </li>
-
             
-
+            <li class="select-item">
+              <button data-select-item>Machine Learning</button>
+            </li>
+            <li class="select-item">
+              <button data-select-item>Cybersecurity</button>
+            </li>
+            <li class="select-item">
+              <button data-select-item>Web Development</button>
+            </li>
           </ul>
+        </div>
+        <ul class="project-list">
+          <li class="project-item active" data-filter-item data-category="machine learning">
+            <a href="https://github.com/chaithra1808/BIG-SALES-PREDICTION-USING-RANDOM-FOREST-REGRESSOR.git" target="_blank">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/project-1.png" alt="Profit Predictor" loading="lazy">
+              </figure>
+              <div class="project-text-container">
+                <h3 class="project-title">Profit Predictor</h3>
+                <p class="project-category">Developed a Random Forest Regressor model to predict future sales using historical data. Focused on optimizing performance, identifying key features, and generating insights to support business decisions.</p>
+              </div>
+            </a>
+          </li>
 
-        </section>
+          <li class="project-item active" data-filter-item data-category="cybersecurity">
+            <a href="https://github.com/chaithra1808/vulnerability-reports.git" target="_blank">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/project-2.webp" alt="Ethical Hacking" loading="lazy">
+              </figure>
+              <div class="project-text-container">
+                <h3 class="project-title">Ethical Hacking and Vulnerability Analysis</h3>
+                <p class="project-category">Demonstrated proficiency in web application security by identifying and reporting 15+ vulnerabilities, including XSS and SQLi, using Testfire.net and Juice Shop, producing detailed reports</p>
+              </div>
+            </a>
+          </li>
 
-      </article>
+      
+
+          <li class="project-item active" data-filter-item data-category="cybersecurity">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-3.webp" alt="Digital Forensics" loading="lazy">
+              </figure>
+
+              <div class="project-text-container">
+                <h3 class="project-title">Digital Forensics and Cybercrime Investigation</h3>
+                <p class="project-category">Cybersecurity</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-item active" data-filter-item data-category="cybersecurity">
+            <a href="https://github.com/chaithra1808/secure-file-transfer.git" target="_blank">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-5.png" alt="Secure File Transfer System" loading="lazy">
+              </figure>
+
+              <div class="project-text-container">
+                <h3 class="project-title">Secure File Transfer System</h3>
+                <p class="project-category">Python-based tool for securely transferring files using AES, RSA, and SHA-256 verification. Includes GUI (Tkinter) and web (Flask) versions.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-item active" data-filter-item data-category="web development">
+            <a href="https://chaithra1808.github.io/task-manager/" target="_blank">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-4.jpg" alt="Task Manager" loading="lazy">
+              </figure>
+
+              <div class="project-text-container">
+                <h3 class="project-title">Task Manager</h3>
+                <p class="project-category">Built an interactive to-do list web application using HTML, CSS, and JavaScript. Features include adding, deleting, and marking tasks as completed.</p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+
+      </section>
+
+    </article>
+
 
       <!--
         - #CONTACT
